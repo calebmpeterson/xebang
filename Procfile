@@ -1,0 +1,1 @@
+web: java $JVM_OPTS -cp target/xebang-standalone.jar clojure.main -m xebang.launcher $PORT
