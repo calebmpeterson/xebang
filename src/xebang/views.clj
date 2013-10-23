@@ -35,8 +35,9 @@
      [:div.container
       [:div.spacer20]
       [:div.row
-        [:div.span6.offset3.text-center
+        [:div.span12.text-center
          [:small "Built by "
           [:a {:href "http://www.cubicle6.com"} "Caleb Peterson"] " | "
           [:a {:href "mailto:caleb.peterson@cubicle6.com"} "E-mail Me"] " | "
+          "Inspired by " [:a {:href "http://www.duckduckgoog.com/"} "DuckDuckGoog"] " | "
           "Soli Deo Gloria"]]]]]]))
