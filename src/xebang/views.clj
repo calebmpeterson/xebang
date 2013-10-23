@@ -5,6 +5,7 @@
   (html5
    [:head
     [:title "Xebang! - Custom URL Bangs"]
+    [:link {:rel "search" :type "application/opensearchdescription+xml" :href "/opensearch.xml" :title "Xebang Without Suggestions"}]
     (include-css "/libs/bootstrap/css/bootstrap.spacelab.min.css")
     (include-css "/css/main.css")
     (include-js "/libs/jquery/jquery-1.9.1.min.js")

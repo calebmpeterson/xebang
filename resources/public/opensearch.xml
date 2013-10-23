@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>Xebang</ShortName>
+    <LongName>Xebang Web Search</LongName>
+    <Description>Xebang passes !bang's to DuckDuckGo and everything else to Google</Description>
+    <InputEncoding>UTF-8</InputEncoding>
+    <OutputEncoding>UTF-8</OutputEncoding>
+    <AdultContent>false</AdultContent>
+    <Language>en-us</Language>
+    <Developer>Caleb Peterson</Developer>
+    <Contact>caleb.peterson@cubicle6.com</Contact>
+    <Tags>Custom Bangs</Tags>
+    <Attribution>Custom Bangs a-top DDG</Attribution>
+    <SyndicationRight>open</SyndicationRight>
+    <Query role="example" searchTerms="Apple !i"/>
+    <Image height="16" width="16" type="image/vnd.microsoft.icon">http://xebang.cubicle6.com/favicon.ico</Image>
+    <Url type="text/html" template="http://xebang.cubicle6.com/q/?query={searchTerms}"/>
+    <Url type="application/opensearchdescription+xml" rel="self" template="http://xebang.cubicle6.com/opensearch.xml" />
+</OpenSearchDescription>
