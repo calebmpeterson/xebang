@@ -41,5 +41,5 @@
           [:a {:href "http://www.cubicle6.com"} "Caleb Peterson"] " | "
           [:a {:href "mailto:caleb.peterson@cubicle6.com"} "E-mail Me"] " | "
           "Inspired by " [:a {:href "http://www.duckduckgoog.com/"} "DuckDuckGoog"] " | "
-          [:a {:href "https://github.com/calebmpeterson/xebang"} "Source on GitBub"] " | "
+          [:a {:href "https://github.com/calebmpeterson/xebang"} "Source on GitHub"] " | "
           "Soli Deo Gloria"]]]]]]))
