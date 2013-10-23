@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # xebang
 
 FIXME
@@ -17,3 +18,9 @@ To start a web server for the application, run:
 ## License
 
 Copyright © 2013 FIXME
+=======
+xebang
+======
+
+Custom URL bangs a la DuckDuckGo
+>>>>>>> 0f8ab940ba11b1acde9c137510f1da1e5da3365b
