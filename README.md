@@ -1,26 +1,15 @@
-<<<<<<< HEAD
-# xebang
+# Xebang!
 
-FIXME
+Custom URL [bangs](https://duckduckgo.com/bang) a la DuckDuckGo with a `Procfile` for Heroku already configured.
 
-## Prerequisites
+## Usage
 
-You will need [Leiningen][1] 1.7.0 or above installed.
+1. Deploy your own instance on local host (requires Leiningen 2) or a Heroku free plan
+2. Set as your default search engine
+3. Experience all the joys of DDG !bangs customized to your liking
 
-[1]: https://github.com/technomancy/leiningen
+## Custom Bangs
 
-## Running
-
-To start a web server for the application, run:
-
-    lein ring server
-
-## License
-
-Copyright © 2013 FIXME
-=======
-xebang
-======
-
-Custom URL bangs a la DuckDuckGo
->>>>>>> 0f8ab940ba11b1acde9c137510f1da1e5da3365b
+1. Add additonal url patterns to `src/xebang/apps.clj`
+2. Redeploy
+3. Profit?
