@@ -13,4 +13,8 @@
        :else (.replace "https://duckduckgo.com/?q={{{s}}}" "{{{s}}}" raw-query))))
 
 (def catalog
-  {'!weather "http://www.weather.com/weather/hourbyhour/graph/{{{s}}}"})
+  {'!weather "http://www.weather.com/weather/hourbyhour/graph/{{{s}}}"
+   '!devdocs "http://devdocs.io/#q={{{s}}}"
+   '!js      "http://devdocs.io/#q=js {{{s}}}"
+   '!css     "http://devdocs.io/#q=css {{{s}}}"
+   '!html    "http://devdocs.io/#q=html {{{s}}}"})
