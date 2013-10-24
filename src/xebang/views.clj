@@ -1,7 +1,15 @@
 (ns xebang.views
   (:use [hiccup core page]))
 
-(defn index []
+
+(defn datalist-option [item]
+  [:option {:value (str item)}])
+
+(defn datalist [id items]
+  [:datalist {:id id}
+   (map datalist-option items)])
+
+(defn index [catalog-of-bangs]
   (html5
    [:head
     [:title "Xebang! - Custom URL Bangs"]
@@ -23,7 +31,8 @@
        [:div.span6.offset3
         [:form.form-inline {:id "command" :method "GET" :action "/q/"}
          [:div.input-append
-          [:input.span5 {:id "input" :name "query" :type "text" :placeholder "bang bang!" :autofocus true}]
+          [:input.span5 {:id "input" :name "query" :type "text" :placeholder "bang bang!" :autocomplete true :list "bangs" :autofocus true}]
+          (datalist "bangs" (map #(str % " ") (keys catalog-of-bangs)))
           [:button.btn.btn-primary [:i.icon-search.icon-white]]]]]]
       [:div.row
        [:div.span6.offset3

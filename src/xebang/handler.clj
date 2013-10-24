@@ -7,7 +7,7 @@
             [xebang.apps :as apps]))
 
 (defroutes app-routes
-  (GET "/" [] (views/index))
+  (GET "/" [] (views/index apps/catalog))
   (GET "/q/" [query] (do (println "query:" query) (redirect (apps/process apps/catalog query))))
   (route/resources "/")
   (route/not-found "Not Found"))
