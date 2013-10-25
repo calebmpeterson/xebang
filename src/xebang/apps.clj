@@ -1,5 +1,11 @@
 (ns xebang.apps)
 
+;; TODO strip the bang from the input after determining
+;;      that it is indeed present and save all of the
+;;      leading ! in the top-level catalog
+
+;; TODO Use recursive bang catalogs for sub commands
+
 (defn process [bangs ^String raw-query]
   (let [words (.split raw-query " ")
         bang  (-> words first symbol)
