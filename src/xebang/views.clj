@@ -9,12 +9,13 @@
   [:datalist {:id id}
    (map datalist-option items)])
 
-(defn index [catalog-of-bangs]
+
+(defn page [title & content]
   (html5
    [:head
-    [:title "!Xebang - Custom URL Bangs"]
-    [:link {:href "/img/favicon.png" :rel "shortcut icon"}]
-    [:link {:rel "search" :type "application/opensearchdescription+xml" :href "/opensearch.xml" :title "Xebang Without Suggestions"}]
+    [:title title]
+    [:link {:rel "shortcut icon" :href "/img/favicon.png"}]
+    [:link {:rel "search" :href "/opensearch.xml" :type "application/opensearchdescription+xml" :title "Xebang Without Suggestions"}]
     (include-css "/libs/bootstrap/css/bootstrap.spacelab.min.css")
     (include-css "/css/main.css")
     (include-js "/libs/jquery/jquery-1.9.1.min.js")
@@ -22,23 +23,7 @@
     (include-js "/js/script.js")]
    [:body
     [:div#wrapper
-     [:div.container
-      [:div {:style "width: 100%; height: 300px;"}]
-      [:div.row
-       [:div.span6.offset3
-        [:h1 "!xebang" [:small " custom url bangs"]]]]
-      [:div.row
-       [:div.span6.offset3
-        [:form.form-inline {:id "command" :method "GET" :action "/q/"}
-         [:div.input-append
-          [:input.span5 {:id "input" :name "query" :type "text" :placeholder "bang bang!" :autocomplete true :list "bangs" :autofocus true}]
-          (datalist "bangs" (map #(str % " ") (keys catalog-of-bangs)))
-          [:button#go.btn.btn-primary [:i.icon-search.icon-white]]]]]]
-      [:div.row
-       [:div.span6.offset3
-        [:small "Enter a bang. Perform a search. "
-         [:a {:href "/help"} "View the docs"] ". "
-         [:a {:href "/browser"} "Tell your browser"] "!"]]]]
+     [:div.container content]
      [:div.push]]
     [:div.footer-top-trim]
     [:footer
@@ -52,3 +37,35 @@
           "Inspired by " [:a {:href "http://www.duckduckgoog.com/"} "DuckDuckGoog"] " | "
           [:a {:href "https://github.com/calebmpeterson/xebang"} "Source on GitHub"] " | "
           "Soli Deo Gloria"]]]]]]))
+
+
+(defn index [catalog-of-bangs]
+  (page "!Xebang | Custom URL Bangs"
+   [:div {:style "width: 100%; height: 300px;"}]
+   [:div.row
+    [:div.span6.offset3
+     [:h1 "!xebang" [:small " custom url bangs"]]]]
+   [:div.row
+    [:div.span6.offset3
+     [:form.form-inline {:id "command" :method "GET" :action "/q/"}
+      [:div.input-append
+       [:input.span5 {:id "input" :name "query" :type "text" :placeholder "!bang bang" :autofocus true :autocomplete true :list "bangs"}]
+       (datalist "bangs" (map #(str % " ") (keys catalog-of-bangs)))
+       [:button#go.btn.btn-primary [:i.icon-search.icon-white]]]]]]
+   [:div.row
+    [:div.span6.offset3
+     [:small "Enter a bang. Perform a search. "
+      [:a {:href "/help"} "View the docs"] ". "
+      [:a {:href "/browser"} "Tell your browser"] "!"]]]))
+
+
+(defn browser []
+  (page "Tell Your Browser | !Xebang"
+        [:div.row
+         [:div.span6.offset3
+          [:h3 "Tell Your Browser"]]]
+        [:div.row
+         [:div.span6.offset3
+          [:p "Xebang can be configured as your default search engine simply by pointing your browser at: "]
+          [:pre "/q/?query=%1"]
+          [:p "Where " [:code "%1"] " is the bang or search term."]]]))

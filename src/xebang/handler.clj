@@ -8,6 +8,7 @@
 
 (defroutes app-routes
   (GET "/" [] (views/index apps/catalog))
+  (GET "/browser" [] (views/browser))
   (GET "/q/" [query] (redirect (apps/process apps/catalog query)))
   (route/resources "/")
   (route/not-found "Not Found"))
