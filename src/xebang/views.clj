@@ -12,7 +12,7 @@
 (defn index [catalog-of-bangs]
   (html5
    [:head
-    [:title "Xebang! - Custom URL Bangs"]
+    [:title "!Xebang - Custom URL Bangs"]
     [:link {:href "/img/favicon.png" :rel "shortcut icon"}]
     [:link {:rel "search" :type "application/opensearchdescription+xml" :href "/opensearch.xml" :title "Xebang Without Suggestions"}]
     (include-css "/libs/bootstrap/css/bootstrap.spacelab.min.css")
@@ -26,14 +26,14 @@
       [:div {:style "width: 100%; height: 300px;"}]
       [:div.row
        [:div.span6.offset3
-        [:h1 "xebang!" [:small " custom url bangs"]]]]
+        [:h1 "!xebang" [:small " custom url bangs"]]]]
       [:div.row
        [:div.span6.offset3
         [:form.form-inline {:id "command" :method "GET" :action "/q/"}
          [:div.input-append
           [:input.span5 {:id "input" :name "query" :type "text" :placeholder "bang bang!" :autocomplete true :list "bangs" :autofocus true}]
           (datalist "bangs" (map #(str % " ") (keys catalog-of-bangs)))
-          [:button.btn.btn-primary [:i.icon-search.icon-white]]]]]]
+          [:button#go.btn.btn-primary [:i.icon-search.icon-white]]]]]]
       [:div.row
        [:div.span6.offset3
         [:small "Enter a bang. Perform a search. "
