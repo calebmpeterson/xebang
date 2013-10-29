@@ -44,4 +44,7 @@ footer {
 
 .align-middle { vertical-align: middle; }
 .monospace { font-family: Consolas, monospace; }
+.spacer10 { height: 10px; }
 .spacer20 { height: 20px; }
+
+#input { width: 406px; }
