@@ -1,5 +1,6 @@
 (ns xebang.views
-  (:use [hiccup core page]))
+  (:use [hiccup core page])
+  (:require [xebang.views.layouts :refer [page]]))
 
 
 (defn datalist-option [item]
@@ -8,35 +9,6 @@
 (defn datalist [id items]
   [:datalist {:id id}
    (map datalist-option items)])
-
-
-(defn page [title & content]
-  (html5
-   [:head
-    [:title title]
-    [:link {:rel "shortcut icon" :href "/img/favicon.png"}]
-    [:link {:rel "search" :href "/opensearch.xml" :type "application/opensearchdescription+xml" :title "Xebang Without Suggestions"}]
-    (include-css "/libs/bootstrap/css/bootstrap.spacelab.min.css")
-    (include-css "/css/main.css")
-    (include-js "/libs/jquery/jquery-1.9.1.min.js")
-    (include-js "/libs/bootstrap/js/bootstrap.min.js")
-    (include-js "/js/script.js")]
-   [:body
-    [:div#wrapper
-     [:div.container content]
-     [:div.push]]
-    [:div.footer-top-trim]
-    [:footer
-     [:div.container
-      [:div.spacer20]
-      [:div.row
-        [:div.span12.text-center
-         [:small "Built by "
-          [:a {:href "http://www.cubicle6.com"} "Caleb Peterson"] " | "
-          [:a {:href "mailto:caleb.peterson@cubicle6.com"} "E-mail Me"] " | "
-          "Inspired by " [:a {:href "http://www.duckduckgoog.com/"} "DuckDuckGoog"] " | "
-          [:a {:href "https://github.com/calebmpeterson/xebang"} "Source on GitHub"] " | "
-          "Soli Deo Gloria"]]]]]]))
 
 
 (defn index [catalog-of-bangs]

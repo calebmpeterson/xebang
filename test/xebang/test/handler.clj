@@ -1,7 +1,7 @@
 (ns xebang.test.handler
   (:use clojure.test
         ring.mock.request
-        xebang.handler))
+        xebang.router))
 
 (deftest test-app
   (testing "main route"

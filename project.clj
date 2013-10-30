@@ -6,7 +6,7 @@
                  [compojure "1.1.5"]
                  [hiccup "1.0.3"]]
   :plugins [[lein-ring "0.8.5"]]
-  :ring {:handler xebang.handler/app}
+  :ring {:handler xebang.router/site-routes}
   :uberjar-name "xebang-standalone.jar"
   ;; Warns users of earlier versions of Leiningen.
   :min-lein-version "2.0.0"

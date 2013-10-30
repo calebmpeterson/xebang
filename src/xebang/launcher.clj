@@ -1,6 +1,6 @@
 (ns xebang.launcher
   (:require [ring.adapter.jetty :as jetty]
-            [xebang.handler :refer [app]]))
+            [xebang.router :refer [site-routes]]))
 
 (defn -main [port]
-  (jetty/run-jetty app {:port (Integer. port) :join? false}))
+  (jetty/run-jetty site-routes {:port (Integer. port) :join? false}))

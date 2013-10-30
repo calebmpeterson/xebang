@@ -1,4 +1,4 @@
-(ns xebang.handler
+(ns xebang.router
   (:use compojure.core)
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
@@ -13,5 +13,4 @@
   (route/resources "/")
   (route/not-found "Not Found"))
 
-(def app
-  (handler/site app-routes))
+(def site-routes (handler/site app-routes))
