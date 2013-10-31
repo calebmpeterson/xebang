@@ -8,5 +8,5 @@
   (require '[xebang.test.handler]
            '[xebang.test.apps]
            :reload :verbose)
-  (clojure.test/run-tests 'xebang.test.handler
+  (clojure.test/run-tests 'xebang.test.router
                           'xebang.test.apps))

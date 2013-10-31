@@ -4,12 +4,13 @@
             [compojure.route :as route]
             [ring.util.response :refer [redirect]]
             [xebang.views :as views]
-            [xebang.apps :as apps]))
+            [xebang.controllers.bangs :as controllers-bangs]
+            [xebang.models.bangs :as models-bangs]))
 
 (defroutes app-routes
-  (GET "/" [] (views/index apps/catalog))
+  (GET "/" [] (views/index models-bangs/catalog))
   (GET "/browser" [] (views/browser))
-  (GET "/q/" [query] (redirect (apps/process apps/catalog query)))
+  (GET "/q/" [query] (redirect (controllers-bangs/!bang models-bangs/catalog query)))
   (route/resources "/")
   (route/not-found "Not Found"))
 
