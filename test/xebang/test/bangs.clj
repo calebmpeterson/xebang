@@ -1,6 +1,6 @@
 (ns xebang.test.bangs
   (:require [clojure.test :refer :all]
-            [xebang.bangs :as bangs]))
+            [xebang.controllers.bangs :as bangs]))
 
 
 ;;

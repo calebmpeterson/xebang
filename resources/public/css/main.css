@@ -10,19 +10,33 @@ body {
 	/* The html and body elements cannot have any padding or margin. */
 }
 
-a {
+h3 { line-height: inherit; }
+
+a.underlined {
 	color: #666;
 	text-decoration: underline;
 }
-a:hover {
+a.underlined:hover {
 	color: #000;
 }
+
+code {
+  color: #404040;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+
+hr {
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #ffffff;
+}
+hr.padded { margin-top: 30px; margin-bottom: 30px; }
 
 /* Wrapper for page content to push down footer */
 #wrapper {
 	min-height: 100%;
 	height: auto !important;
-	height: 100%;
 	/* Negative indent footer by it's height */
 	margin: 0 auto -60px;
 }
@@ -46,5 +60,36 @@ footer {
 .monospace { font-family: Consolas, monospace; }
 .spacer10 { height: 10px; }
 .spacer20 { height: 20px; }
+.spacer40 { height: 40px; }
+.spacer-feature { height: 60px; }
 
 #input { width: 406px; }
+
+tbody tr:hover { background-color: #f0f0f0; }
+tbody tr a.action { visibility: hidden; }
+tbody tr:hover a.action { visibility: visible; }
+
+
+/* Landing Page */
+.jumbotron {
+  margin: 60px 0px;
+}
+.jumbotron h1 {
+  font-size: 72px;
+}
+.jumbotron .lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200%;
+}
+
+.jumbotron.lower {
+  margin-bottom: 20px;
+}
+
+p.pitch {
+  margin-top: 70px;
+  line-height: 110%;
+  font-size: 26px;
+  font-weight: 200%;
+}

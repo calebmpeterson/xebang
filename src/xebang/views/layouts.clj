@@ -16,7 +16,7 @@
    [:body
     [:div#wrapper
      [:div.container content]
-     [:div.push]]
+     [:div#push]]
     [:div.footer-top-trim]
     [:footer
      [:div.container

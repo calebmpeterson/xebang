@@ -4,7 +4,8 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [ring/ring-jetty-adapter "1.2.0"]
                  [compojure "1.1.5"]
-                 [hiccup "1.0.3"]]
+                 [hiccup "1.0.3"]
+                 [congomongo "0.4.1"]]
   :plugins [[lein-ring "0.8.5"]]
   :ring {:handler xebang.router/site-routes}
   :uberjar-name "xebang-standalone.jar"

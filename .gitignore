@@ -1,3 +1,4 @@
+/bin
 /target
 /lib
 /classes
@@ -7,3 +8,7 @@ pom.xml
 *.jar
 *.class
 .lein-*
+.nrepl-port
+.classpath
+.project
+.env
