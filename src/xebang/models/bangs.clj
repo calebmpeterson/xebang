@@ -11,6 +11,8 @@
    '!js         "http://devdocs.io/#q=js {{{s}}}"
    '!css        "http://devdocs.io/#q=css {{{s}}}"
    '!html       "http://devdocs.io/#q=html {{{s}}}"
+   '!jquery     "http://devdocs.io/#q=jquery {{{s}}}"
+   '!underscore "http://devdocs.io/#q=underscore {{{s}}}"
    '!namecheap  "http://www.namecheap.com/domains/domain-name-search/results.aspx?domain={{{s}}}&tlds=&searchall=&type=single&"})
 
 (def mock-config
