@@ -3,6 +3,7 @@
 (def catalog
   {'!bible      "http://www.bible.com/search?q={{{s}}}"
    '!kidsinmind "http://www.kids-in-mind.com/cgi-bin/search/search.pl?q={{{s}}}"
+   '!movies     "http://www.google.com/movies?hl=en&near={{{s}}}"
    '!weather    "http://weatherspark.com/#!dashboard;q={{{s}}}"
    '!w          "http://weatherspark.com/#!dashboard;q={{{s}}}"
    '!syn        "http://thesaurus.com/browse/{{{s}}}"
