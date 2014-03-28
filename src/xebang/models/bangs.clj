@@ -12,6 +12,7 @@
    '!js         "http://devdocs.io/#q=js {{{s}}}"
    '!css        "http://devdocs.io/#q=css {{{s}}}"
    '!html       "http://devdocs.io/#q=html {{{s}}}"
+   '!http       "http://devdocs.io/#q=http {{{s}}}"
    '!jquery     "http://devdocs.io/#q=jquery {{{s}}}"
    '!underscore "http://devdocs.io/#q=underscore {{{s}}}"
    '!markdown   "http://daringfireball.net/projects/markdown/syntax#{{{s}}}"
