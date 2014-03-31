@@ -8,6 +8,7 @@
    '!w          "http://weatherspark.com/#!dashboard;q={{{s}}}"
    '!syn        "http://thesaurus.com/browse/{{{s}}}"
    '!def        "http://dictionary.com/browse/{{{s}}}"
+   '!values     "http://0to255.com/{{{s}}}"
    '!devdocs    "http://devdocs.io/#q={{{s}}}"
    '!js         "http://devdocs.io/#q=js {{{s}}}"
    '!css        "http://devdocs.io/#q=css {{{s}}}"
