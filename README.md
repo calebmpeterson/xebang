@@ -10,6 +10,6 @@ Custom URL [bangs](https://duckduckgo.com/bang) a la DuckDuckGo with a `Procfile
 
 ## Custom Bangs
 
-1. Add additonal url patterns to `src/xebang/apps.clj`
+1. Add additonal url patterns to `src/xebang/models/bangs.clj`
 2. Redeploy
 3. Profit?
